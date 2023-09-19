@@ -1,0 +1,49 @@
+SQLserver 2019 - Jhonatan (Professor).
+
+Link para baixar sql: 
+ https://learn.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+
+Recomendação para guardar em um lugar 'seguro' o CONNECTION STRING:
+ Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+
+Instalar o SSMS(Estúdio de gerenciamento de servidores/Server Management Studio):
+ Permite que você se conecte a um servidor e consiga executar comandos dentro.
+
+Comandos SQL:
+ SELECT - Comando SELEC serve para selecionar uma coluna ou todas de uma tabela e extraia dados de uma tabela de um BD(Banco de Dados) que foi expecificada. 
+Comando universal que roda em qualquer Banco de Dados que vc utize (SQL Server, Postgres, Orecle e MySQL).
+EX: SELECT coluna1, coluna2
+    FROM tabela;
+    
+    SELECT * -> Esse * serve para selecionar todas as colunas de uma tabela.
+    FROM tabela;
+ 
+ DISTINCT - Comando DISTICT serve para eliminar a duplicidade de uma coluna, incluso com o comando SELECT.
+EX: SELECT DISTINCT coluna1
+    FROM tabela;
+
+ COUNT - Esse comando retorna o número de itens encontrados em uma coluna (grupo).
+EX: SELECT COUNT (coluna1)
+    FROM tabela;
+
+ TOP - Esse comando determina quantas linhas será puxada de uma coluna (grupo).
+EX: SELECT TOP 10 -- será puxado as 10 primeiras linhas. 
+    FROM tabela;
+ 
+ ORDER BY - Esse comando faz com que você ordene as colunas por ordem crescente ou decrescente.
+EX: SELECT coluna1, coluna2
+    FROM tabela
+    ORDER BY coluna1 asc/desc -- asc = Crescente, desc = Descrescente.
+
+ BETWEEN - Esse comando serve para você puxar entre valores na tabela ou puxar exatamente aquele rage da tabela.
+EX: SELCET *
+    FROM HumanResources.Employee
+    WHERE HireData BETWEEN '2005/01/01' and '2009/01/01'
+    ORDER BY HireData
+
+ IN - Esse é uma comando para conseguir puxar linhas que foi listada, serve de corta caminho para não repetir código e deixar ele mais limpo.
+EX: SELECT *
+    FROM Person.Person
+    WHERE BusinessEntityID IN (linha1, linha2, linha55)
+
+ LIKE -
